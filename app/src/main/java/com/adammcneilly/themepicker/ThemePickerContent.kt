@@ -11,6 +11,7 @@ import androidx.compose.ui.unit.dp
 
 @Composable
 fun ThemePickerContent(
+    onThemeTypeSelected: (ThemeType) -> Unit,
     modifier: Modifier = Modifier,
 ) {
     Column(
@@ -20,19 +21,25 @@ fun ThemePickerContent(
         ButtonRow(
             text = "Light",
             selected = false,
-            onClick = {},
+            onClick = {
+                onThemeTypeSelected(ThemeType.LIGHT)
+            },
         )
 
         ButtonRow(
             text = "Dark",
             selected = false,
-            onClick = {},
+            onClick = {
+                onThemeTypeSelected(ThemeType.DARK)
+            },
         )
 
         ButtonRow(
             text = "System Default",
             selected = true,
-            onClick = {},
+            onClick = {
+                onThemeTypeSelected(ThemeType.SYSTEM_DEFAULT)
+            },
         )
     }
 }
