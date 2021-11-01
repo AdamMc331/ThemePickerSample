@@ -67,7 +67,8 @@ class MainActivity : ComponentActivity() {
                                         settings[themeTypeKey] = themeType.name
                                     }
                                 }
-                            }
+                            },
+                            selectedThemeType = themeType.value,
                         )
                     }
                 }
